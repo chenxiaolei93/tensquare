@@ -1,0 +1,5 @@
+server:
+  port: 15672
+spring:
+  rabbitmq:
+    host: 111.229.224.94
