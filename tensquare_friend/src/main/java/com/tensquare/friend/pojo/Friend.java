@@ -6,6 +6,9 @@ import javax.persistence.IdClass;
 import javax.persistence.Table;
 import java.io.Serializable;
 
+/**
+ * //TODO
+ */
 @Entity
 @Table(name = "tb_friend")
 @IdClass(Friend.class)//指定联合主键
