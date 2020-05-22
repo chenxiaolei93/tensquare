@@ -77,9 +77,9 @@ public class LabelController {
      * @param labelId
      * @return
      */
-    @PostMapping("/{labelId}")
+    @DeleteMapping("/{labelId}")
     public Result deleteById(@PathVariable String labelId) {
-        labelService.deleteById(labelId);
+       labelService.deleteById(labelId);
         return new Result(true, StatusCode.OK, "删除成功");
     }
 
