@@ -68,7 +68,16 @@ public class LabelService {
      * @param id
      */
     public void deleteById(String id) {
-        labelDao.deleteById(id);
+        Label label = new Label();
+        Label labels = this.findById(id);
+        label.setId(labels.getId());
+        label.setState("0");
+        label.setLabelname(labels.getLabelname());
+        label.setCount(labels.getCount());
+        label.setFans(labels.getFans());
+        label.setRecommend(labels.getRecommend());
+        labelDao.save(label);
+        //labelDao.deleteById(id);
     }
 
     public List<Label> findSearch(Label label) {

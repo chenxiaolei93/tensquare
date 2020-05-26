@@ -18,4 +18,5 @@ public interface EnterpriseDao extends JpaRepository<Enterprise,String>,JpaSpeci
      * @return
      */
 	public List<Enterprise> findByIshot(String ishot);
+
 }
